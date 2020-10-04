@@ -1,0 +1,30 @@
+<div class="container covid-table">
+    <h1 *ngIf="summary?.Date">Last checked at: {{summary.Date | date: 'yyyy-MM-dd:HH:mm:ss'}}</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Country</th>
+                <th scope="col">Total confirmed</th>
+                <th scope="col">New confirmed</th>
+                <th scope="col">Total recovered</th>
+                <th scope="col">New recovered</th>
+                <th scope="col">Total deaths</th>
+                <th scope="col">New deaths</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let country of summary?.Countries; let i = index">
+                <th scope="row">{{i + 1}}</th>
+                <td>{{country.Country}}</td>
+                <td>{{country.TotalConfirmed | number}}</td>
+                <td>{{country.NewConfirmed | number}}</td>
+                <td>{{country.TotalRecovered | number}}</td>
+                <td>{{country.NewRecovered | number}}</td>
+                <td>{{country.TotalDeaths | number}}</td>
+                <td>{{country.NewDeaths | number}}</td>
+            </tr>
+            
+        </tbody>
+    </table>
+</div>

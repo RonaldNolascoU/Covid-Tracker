@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card-counter primary">
+                <i class="fa fa-user"></i>
+                <span class="count-numbers" *ngIf="globalData?.TotalConfirmed">{{globalData.TotalConfirmed | number}}</span>
+                <span class="count-name">Total Confirmed</span>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card-counter success">
+                <i class="fa fa-user-plus"></i>
+                <span class="count-numbers" *ngIf="globalData?.NewConfirmed">{{globalData.NewConfirmed | number}}</span>
+                <span class="count-name">New confirmed</span>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card-counter danger">
+                <i class="fa fa-user-times"></i>
+                <span class="count-numbers" *ngIf="globalData?.TotalDeaths">{{globalData.TotalDeaths | number}}</span>
+                <span class="count-name">Total Deaths</span>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card-counter info">
+                <i class="fa fa-heart"></i>
+                <span class="count-numbers" *ngIf="globalData?.TotalRecovered">{{globalData.TotalRecovered | number}}</span>
+                <span class="count-name">Total recovered</span>
+            </div>
+        </div>
+    </div>
+</div>

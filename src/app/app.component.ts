@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pwa';
+  public global
+
+  getGlobalSummary(data) {
+    this.global = data.Global;
+  }
 }

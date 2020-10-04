@@ -1,0 +1,9 @@
+.covid-table {
+    overflow-y: auto;
+    height: 100vh;
+}
+
+.covid-table thead th{
+    position: sticky; top: 0;
+    background: white;
+}
